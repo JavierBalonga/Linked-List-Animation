@@ -1,0 +1,534 @@
+body {
+    display: flex;
+}
+.menu {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    background-image: url("./img/menuBackground.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+button {
+    height: 50px;
+    width: 150px;
+    font-size: 30px;
+    background-color: aquamarine;
+    border-radius: 10px;
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+button:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+p {
+    font-size: 20px;
+    border: 2px solid black;
+    background: whitesmoke;
+    box-shadow: 2px 2px 5px 0px black;
+}
+.pointer p{
+    transform: rotateZ(90deg);
+}
+.null p{
+    transform: scaleX(-1);
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px white;
+    color: white;
+}
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.animation {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 120px);
+    margin: 10px;
+    border-radius: 10px;
+    background-image: url("./img/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.LinkedList {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url("./img/List.png");
+    background-size: cover;
+}
+.head {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url("./img/arrow.png");
+    background-size: cover;
+}
+.next {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url("./img/arrow.png");
+    background-size: cover;
+}
+.node {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 5px solid aqua;
+    border-radius: 55px;
+    box-shadow: 5px 5px 5px 0px black;
+}
+.null {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-image: url("./img/null.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+}
+.pointer {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url("./img/arrow.png");
+    background-size: cover;
+    display: flex;
+    transform: rotateZ(-90deg);
+}
+.filter {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    border: 5px solid steelblue;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 0px black;
+    font-size: 20px;
+    color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: 0;
+}
+.value {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: hotpink;
+    border: 5px solid deeppink;
+    border-radius: 55px;
+    box-shadow: 5px 5px 5px 0px black;
+    font-size: 20px;
+    color: black;
+    opacity: 0;
+}
+.add #ll  {animation: addLinkedList 10s linear infinite;}
+.add #h   {animation: addHead       10s linear infinite;}
+.add #n1  {animation: addNode1      10s linear infinite;}
+.add #nx1 {animation: addNext1      10s linear infinite;}
+.add #n2  {animation: addNode2      10s linear infinite;}
+.add #nx2 {animation: addNext2      10s linear infinite;}
+.add #nu1 {animation: addNull1      10s linear infinite;}
+.add #nu2 {animation: addNull2      10s linear infinite;}
+.add #p1  {animation: addPointer1   10s linear infinite;}
+.add #p2  {animation: addPointer2   10s linear infinite;}
+.add #n3  {animation: addNode3      10s linear infinite;}
+.add #nx3 {animation: addNext3      10s linear infinite;}
+.add #val {animation: addValue      10s linear infinite;}
+@keyframes addLinkedList{
+    0%   {top: 30%; left:  5%; opacity: 0;}
+    5%   {top: 30%; left:  5%; opacity: 1;}
+    35%  {top: 30%; left:  5%; opacity: 1;}
+    45%  {top: 30%; left:  5%; opacity: 0;}
+    75%  {top: 30%; left:  5%; opacity: 0;}
+    85%  {top: 30%; left:  5%; opacity: 1;}
+    95%  {top: 30%; left:  5%; opacity: 1;}
+    100% {top: 30%; left:  5%; opacity: 0;}
+}
+@keyframes addHead{
+    0%   {top: 30%; left: 15%; opacity: 0;}
+    5%   {top: 30%; left: 15%; opacity: 1;}
+    40%  {top: 30%; left: 15%; opacity: 1;}
+    50%  {top: 30%; left: 15%; opacity: 0;}
+    75%  {top: 30%; left: 15%; opacity: 0;}
+    85%  {top: 30%; left: 15%; opacity: 1;}
+    95%  {top: 30%; left: 15%; opacity: 1;}
+    100% {top: 30%; left: 15%; opacity: 0;}
+}
+@keyframes addNode1{
+    0%   {top: 30%; left: 25%; opacity: 0;}
+    5%   {top: 30%; left: 25%; opacity: 1;}
+    45%  {top: 30%; left: 25%; opacity: 1;}
+    55%  {top: 30%; left: 25%; opacity: 0;}
+    75%  {top: 30%; left: 25%; opacity: 0;}
+    85%  {top: 30%; left: 25%; opacity: 1;}
+    95%  {top: 30%; left: 25%; opacity: 1;}
+    100% {top: 30%; left: 25%; opacity: 0;}
+}
+@keyframes addNext1{
+    0%   {top: 30%; left: 35%; opacity: 0;}
+    5%   {top: 30%; left: 35%; opacity: 1;}
+    50%  {top: 30%; left: 35%; opacity: 1;}
+    60%  {top: 30%; left: 35%; opacity: 0;}
+    75%  {top: 30%; left: 35%; opacity: 0;}
+    85%  {top: 30%; left: 35%; opacity: 1;}
+    95%  {top: 30%; left: 35%; opacity: 1;}
+    100% {top: 30%; left: 35%; opacity: 0;}
+}
+@keyframes addNode2{
+    0%   {top: 30%; left: 45%; opacity: 0;}
+    5%   {top: 30%; left: 45%; opacity: 1;}
+    95%  {top: 30%; left: 45%; opacity: 1;}
+    100% {top: 30%; left: 45%; opacity: 0;}
+}
+@keyframes addNext2{
+    0%   {top: 30%; left: 55%; opacity: 0;}
+    5%   {top: 30%; left: 55%; opacity: 1;}
+    95%  {top: 30%; left: 55%; opacity: 1;}
+    100% {top: 30%; left: 55%; opacity: 0;}
+}
+@keyframes addNull1{
+    0%   {top: 30%; left: 65%; opacity: 0;}
+    5%   {top: 30%; left: 65%; opacity: 1;}
+    55%  {top: 30%; left: 65%; opacity: 1;}
+    65%  {top: 30%; left: 85%; opacity: 1;}
+    95%  {top: 30%; left: 85%; opacity: 1;}
+    100% {top: 30%; left: 85%; opacity: 0;}
+}
+@keyframes addNode3{
+    0%   {top: 70%; left:  5%; opacity: 0;}
+    5%   {top: 70%; left:  5%; opacity: 0;}
+    15%  {top: 70%; left:  5%; opacity: 0;}
+    25%  {top: 70%; left:  5%; opacity: 1;}
+    55%  {top: 70%; left:  5%; opacity: 1;}
+    65%  {top: 30%; left: 65%; opacity: 1;}
+    95%  {top: 30%; left: 65%; opacity: 1;}
+    100% {top: 30%; left: 65%; opacity: 0;}
+}
+@keyframes addNext3{
+    0%   {top: 70%; left: 15%; opacity: 0;}
+    5%   {top: 70%; left: 15%; opacity: 0;}
+    15%  {top: 70%; left: 15%; opacity: 0;}
+    25%  {top: 70%; left: 15%; opacity: 1;}
+    55%  {top: 70%; left: 15%; opacity: 1;}
+    65%  {top: 30%; left: 75%; opacity: 1;}
+    95%  {top: 30%; left: 75%; opacity: 1;}
+    100% {top: 30%; left: 75%; opacity: 0;}
+}
+@keyframes addNull2{
+    0%   {top: 70%; left: 25%; opacity: 0;}
+    5%   {top: 70%; left: 25%; opacity: 0;}
+    15%  {top: 70%; left: 25%; opacity: 0;}
+    25%  {top: 70%; left: 25%; opacity: 1;}
+    55%  {top: 70%; left: 25%; opacity: 1;}
+    65%  {top: 30%; left: 85%; opacity: 1;}
+    95%  {top: 30%; left: 85%; opacity: 1;}
+    100% {top: 30%; left: 85%; opacity: 0;}
+}
+@keyframes addPointer1{
+    0%   {top: 50%; left:  5%; opacity: 0;}
+    25%  {top: 50%; left:  5%; opacity: 0;}
+    35%  {top: 50%; left:  5%; opacity: 1;}
+    55%  {top: 50%; left: 45%; opacity: 1;}
+    75%  {top: 50%; left: 45%; opacity: 0;}
+    100% {top: 50%; left: 45%; opacity: 0;}
+}
+@keyframes addPointer2{
+    0%   {top: 50%; left:  5%; opacity: 0;}
+    100% {top: 50%; left:  5%; opacity: 0;}
+}
+@keyframes addValue{
+    0%   {top: 77%; left:  7.5%; opacity: 0;}
+    5%   {top: 77%; left:  7.5%; opacity: 0;}
+    15%  {top: 77%; left:  7.5%; opacity: 1;}
+    25%  {top: 77%; left:  7.5%; opacity: 0;}
+    100% {top: 77%; left:  7.5%; opacity: 0;}
+}
+.remove #ll  {animation: remLinkedList 10s linear infinite;}
+.remove #h   {animation: remHead       10s linear infinite;}
+.remove #n1  {animation: remNode1      10s linear infinite;}
+.remove #nx1 {animation: remNext1      10s linear infinite;}
+.remove #n2  {animation: remNode2      10s linear infinite;}
+.remove #nx2 {animation: remNext2      10s linear infinite;}
+.remove #n3  {animation: remNode3      10s linear infinite;}
+.remove #nx3 {animation: remNext3      10s linear infinite;}
+.remove #nu1 {animation: remNull1      10s linear infinite;}
+.remove #nu2 {opacity: 0;}
+.remove #p1  {animation: remPointer1   10s linear infinite;}
+.remove #p2  {animation: remPointer2   10s linear infinite;}
+.remove #p2 p{animation:remPointer2txt 10s linear infinite;}
+.remove #val {animation: remValue      10s linear infinite;}
+@keyframes remLinkedList{
+    0%   {top: 30%; left:  5%; opacity: 0;}
+    5%   {top: 30%; left:  5%; opacity: 1;}
+    15%  {top: 30%; left:  5%; opacity: 1;}
+    25%  {top: 30%; left:  5%; opacity: 0;}
+    65%  {top: 30%; left:  5%; opacity: 0;}
+    75%  {top: 30%; left:  5%; opacity: 1;}
+    95%  {top: 30%; left:  5%; opacity: 1;}
+    100% {top: 30%; left:  5%; opacity: 0;}
+}
+@keyframes remHead{
+    0%   {top: 30%; left: 15%; opacity: 0;}
+    5%   {top: 30%; left: 15%; opacity: 1;}
+    20%  {top: 30%; left: 15%; opacity: 1;}
+    30%  {top: 30%; left: 15%; opacity: 0;}
+    65%  {top: 30%; left: 15%; opacity: 0;}
+    75%  {top: 30%; left: 15%; opacity: 1;}
+    95%  {top: 30%; left: 15%; opacity: 1;}
+    100% {top: 30%; left: 15%; opacity: 0;}
+}
+@keyframes remNode1{
+    0%   {top: 30%; left: 25%; opacity: 0;}
+    5%   {top: 30%; left: 25%; opacity: 1;}
+    25%  {top: 30%; left: 25%; opacity: 1;}
+    35%  {top: 30%; left: 25%; opacity: 0;}
+    65%  {top: 30%; left: 25%; opacity: 0;}
+    75%  {top: 30%; left: 25%; opacity: 1;}
+    95%  {top: 30%; left: 25%; opacity: 1;}
+    100% {top: 30%; left: 25%; opacity: 0;}
+}
+@keyframes remNext1{
+    0%   {top: 30%; left: 35%; opacity: 0;}
+    5%   {top: 30%; left: 35%; opacity: 1;}
+    30%  {top: 30%; left: 35%; opacity: 1;}
+    40%  {top: 30%; left: 35%; opacity: 0;}
+    65%  {top: 30%; left: 35%; opacity: 0;}
+    75%  {top: 30%; left: 35%; opacity: 1;}
+    95%  {top: 30%; left: 35%; opacity: 1;}
+    100% {top: 30%; left: 35%; opacity: 0;}
+}
+@keyframes remNode2{
+    0%   {top: 30%; left: 45%; opacity: 0;}
+    5%   {top: 30%; left: 45%; opacity: 1;}
+    95%  {top: 30%; left: 45%; opacity: 1;}
+    100% {top: 30%; left: 45%; opacity: 0;}
+}
+@keyframes remNext2{
+    0%   {top: 30%; left: 55%; opacity: 0;}
+    4%   {top: 30%; left: 55%; opacity: 1;}
+    95%  {top: 30%; left: 55%; opacity: 1;}
+    100% {top: 30%; left: 55%; opacity: 0;}
+}
+@keyframes remNode3{
+    0%   {top: 30%; left: 65%; opacity: 0;}
+    5%   {top: 30%; left: 65%; opacity: 1;}
+    45%  {top: 30%; left: 65%; opacity: 1;}
+    55%  {top: 30%; left: 65%; opacity: 0;}
+    100% {top: 30%; left: 65%; opacity: 0;}
+}
+@keyframes remNext3{
+    0%   {top: 30%; left: 75%; opacity: 0;}
+    5%   {top: 30%; left: 75%; opacity: 1;}
+    45%  {top: 30%; left: 75%; opacity: 1;}
+    55%  {top: 30%; left: 75%; opacity: 0;}
+    100% {top: 30%; left: 75%; opacity: 0;}
+}
+@keyframes remNull1{
+    0%   {top: 30%; left: 85%; opacity: 0;}
+    5%   {top: 30%; left: 85%; opacity: 1;}
+    45%  {top: 30%; left: 85%; opacity: 1;}
+    55%  {top: 30%; left: 65%; opacity: 1;}
+    95%  {top: 30%; left: 65%; opacity: 1;}
+    100% {top: 30%; left: 65%; opacity: 0;}
+}
+@keyframes remPointer1{
+    0%   {top: 50%; left:  5%; opacity: 0;}
+    5%   {top: 50%; left:  5%; opacity: 0;}
+    15%  {top: 50%; left:  5%; opacity: 1;}
+    35%  {top: 50%; left: 45%; opacity: 1;}
+    55%  {top: 50%; left: 45%; opacity: 1;}
+    65%  {top: 50%; left: 45%; opacity: 0;}
+    100% {top: 50%; left: 45%; opacity: 0;}
+}
+@keyframes remPointer2{
+    0%   {top: 50%; left: 65%; opacity: 0;}
+    35%  {top: 50%; left: 65%; opacity: 0;}
+    45%  {top: 50%; left: 65%; opacity: 1; transform: rotateZ(-90deg);}
+    55%  {top: 50%; left: 65%; opacity: 1; transform: rotateZ( 90deg);}
+    65%  {top: 50%; left: 65%; opacity: 0; transform: rotateZ( 90deg);}
+    100% {top: 50%; left: 65%; opacity: 0;}
+}
+@keyframes remPointer2txt{
+    0%   {transform: rotateZ( 90deg);}
+    45%  {transform: rotateZ( 90deg);}
+    55%  {transform: rotateZ(-90deg);}
+    100% {transform: rotateZ(-90deg);}
+}
+@keyframes remValue{
+    0%   {top: 37%; left: 67.5%; opacity: 0;}
+    40%  {top: 37%; left: 67.5%; opacity: 0;}
+    45%  {top: 37%; left: 67.5%; opacity: 1;}
+    55%  {top: 77%; left: 67.5%; opacity: 1;}
+    95%  {top: 77%; left: 67.5%; opacity: 1;}
+    100% {top: 77%; left: 67.5%; opacity: 0;}
+}
+.search #ll  {animation: schLinkedList 10s linear infinite;}
+.search #h   {animation: schHead       10s linear infinite;}
+.search #n1  {animation: schNode1      10s linear infinite;}
+.search #nx1 {animation: schNext1      10s linear infinite;}
+.search #n2  {animation: schNode2      10s linear infinite;}
+.search #nx2 {animation: schNext2      10s linear infinite;}
+.search #n3  {animation: schNode3      10s linear infinite;}
+.search #nx3 {animation: schNext3      10s linear infinite;}
+.search #nu1 {animation: schNull1      10s linear infinite;}
+.search #nu2 {opacity: 0;}
+.search #p1  {animation: schPointer1   10s linear infinite;}
+.search #p2  {opacity: 0;}
+.search #fil {animation: schFilter     10s linear infinite;}
+.search #val {animation: schValue      10s linear infinite;}
+@keyframes schLinkedList{
+    0%   {top: 30%; left:  5%; opacity: 0;}
+    5%   {top: 30%; left:  5%; opacity: 1;}
+    15%  {top: 30%; left:  5%; opacity: 1;}
+    25%  {top: 30%; left:  5%; opacity: 0;}
+    65%  {top: 30%; left:  5%; opacity: 0;}
+    75%  {top: 30%; left:  5%; opacity: 1;}
+    95%  {top: 30%; left:  5%; opacity: 1;}
+    100% {top: 30%; left:  5%; opacity: 0;}
+}
+@keyframes schHead{
+    0%   {top: 30%; left: 15%; opacity: 0;}
+    5%   {top: 30%; left: 15%; opacity: 1;}
+    20%  {top: 30%; left: 15%; opacity: 1;}
+    30%  {top: 30%; left: 15%; opacity: 0;}
+    65%  {top: 30%; left: 15%; opacity: 0;}
+    75%  {top: 30%; left: 15%; opacity: 1;}
+    95%  {top: 30%; left: 15%; opacity: 1;}
+    100% {top: 30%; left: 15%; opacity: 0;}
+}
+@keyframes schNode1{
+    0%   {top: 30%; left: 25%; opacity: 0;}
+    5%   {top: 30%; left: 25%; opacity: 1;}
+    25%  {top: 30%; left: 25%; opacity: 1;}
+    35%  {top: 30%; left: 25%; opacity: 0;}
+    65%  {top: 30%; left: 25%; opacity: 0;}
+    75%  {top: 30%; left: 25%; opacity: 1;}
+    95%  {top: 30%; left: 25%; opacity: 1;}
+    100% {top: 30%; left: 25%; opacity: 0;}
+}
+@keyframes schNext1{
+    0%   {top: 30%; left: 35%; opacity: 0;}
+    5%   {top: 30%; left: 35%; opacity: 1;}
+    30%  {top: 30%; left: 35%; opacity: 1;}
+    40%  {top: 30%; left: 35%; opacity: 0;}
+    65%  {top: 30%; left: 35%; opacity: 0;}
+    75%  {top: 30%; left: 35%; opacity: 1;}
+    95%  {top: 30%; left: 35%; opacity: 1;}
+    100% {top: 30%; left: 35%; opacity: 0;}
+}
+@keyframes schNode2{
+    0%   {top: 30%; left: 45%; opacity: 0;}
+    5%   {top: 30%; left: 45%; opacity: 1;}
+    35%  {top: 30%; left: 45%; opacity: 1;}
+    45%  {top: 30%; left: 45%; opacity: 0;}
+    65%  {top: 30%; left: 45%; opacity: 0;}
+    75%  {top: 30%; left: 45%; opacity: 1;}
+    95%  {top: 30%; left: 45%; opacity: 1;}
+    100% {top: 30%; left: 45%; opacity: 0;}
+}
+@keyframes schNext2{
+    0%   {top: 30%; left: 55%; opacity: 0;}
+    4%   {top: 30%; left: 55%; opacity: 1;}
+    40%  {top: 30%; left: 55%; opacity: 1;}
+    50%  {top: 30%; left: 55%; opacity: 0;}
+    65%  {top: 30%; left: 55%; opacity: 0;}
+    75%  {top: 30%; left: 55%; opacity: 1;}
+    95%  {top: 30%; left: 55%; opacity: 1;}
+    100% {top: 30%; left: 55%; opacity: 0;}
+}
+@keyframes schNode3{
+    0%   {top: 30%; left: 65%; opacity: 0;}
+    5%   {top: 30%; left: 65%; opacity: 1;}
+    95%  {top: 30%; left: 65%; opacity: 1;}
+    100% {top: 30%; left: 65%; opacity: 0;}
+}
+@keyframes schNext3{
+    0%   {top: 30%; left: 75%; opacity: 0;}
+    5%   {top: 30%; left: 75%; opacity: 1;}
+    95%  {top: 30%; left: 75%; opacity: 1;}
+    100% {top: 30%; left: 75%; opacity: 0;}
+}
+@keyframes schNull1{
+    0%   {top: 30%; left: 85%; opacity: 0;}
+    5%   {top: 30%; left: 85%; opacity: 1;}
+    95%  {top: 30%; left: 85%; opacity: 1;}
+    100% {top: 30%; left: 85%; opacity: 0;}
+}
+@keyframes schPointer1{
+    0%   {top: 50%; left:  5%; opacity: 0;}
+    5%   {top: 50%; left:  5%; opacity: 0;}
+    13%  {top: 50%; left:  5%; opacity: 1;}
+    15%  {top: 50%; left:  5%; opacity: 1;}
+    17%  {top: 50%; left:  5%; opacity: 1;}
+    23%  {top: 50%; left: 25%; opacity: 1;}
+    25%  {top: 50%; left: 25%; opacity: 1;}
+    27%  {top: 50%; left: 25%; opacity: 1;}
+    33%  {top: 50%; left: 45%; opacity: 1;}
+    35%  {top: 50%; left: 45%; opacity: 1;}
+    37%  {top: 50%; left: 45%; opacity: 1;}
+    43%  {top: 50%; left: 65%; opacity: 1;}
+    45%  {top: 50%; left: 65%; opacity: 1;}
+    55%  {top: 50%; left: 65%; opacity: 1;}
+    65%  {top: 50%; left: 65%; opacity: 0;}
+    100% {top: 50%; left: 65%; opacity: 0;}
+}
+@keyframes schFilter{
+    0%   {top: 25%; left: 25%; opacity: 0;}
+    20%  {top: 25%; left: 25%; opacity: 0;}
+    23%  {top: 25%; left: 25%; opacity: 1; background-image: unset;}
+    25%  {top: 25%; left: 25%; opacity: 1; background-image: url("./img/no.png");}
+    27%  {top: 25%; left: 25%; opacity: 1; background-image: unset;}
+    33%  {top: 25%; left: 45%; opacity: 1; background-image: unset;}
+    35%  {top: 25%; left: 45%; opacity: 1; background-image: url("./img/no.png");}
+    37%  {top: 25%; left: 45%; opacity: 1; background-image: unset;}
+    43%  {top: 25%; left: 65%; opacity: 1; background-image: unset;}
+    45%  {top: 25%; left: 65%; opacity: 1; background-image: url("./img/yes.png");}
+    55%  {top: 25%; left: 65%; opacity: 1; background-image: url("./img/yes.png");}
+    65%  {top: 25%; left: 65%; opacity: 0;}
+    100% {top: 25%; left: 65%; opacity: 0;}
+}
+@keyframes schValue{
+    0%   {top: 37%; left: 67.5%; opacity: 0;}
+    45%  {top: 37%; left: 67.5%; opacity: 0;}
+    50%  {top: 37%; left: 67.5%; opacity: 1;}
+    55%  {top: 77%; left: 67.5%; opacity: 1;}
+    95%  {top: 77%; left: 67.5%; opacity: 1;}
+    100% {top: 77%; left: 67.5%; opacity: 0;}
+}
+.standby #ll  {top: 30%; left:  5%;}
+.standby #h   {top: 30%; left: 15%;}
+.standby #n1  {top: 30%; left: 25%;}
+.standby #nx1 {top: 30%; left: 35%;}
+.standby #n2  {top: 30%; left: 45%;}
+.standby #nx2 {top: 30%; left: 55%;}
+.standby #n3  {top: 30%; left: 65%;}
+.standby #nx3 {top: 30%; left: 75%;}
+.standby #nu1 {top: 30%; left: 85%;}
+.standby #nu2 {opacity: 0;}
+.standby #p1  {opacity: 0;}
+.standby #p2  {opacity: 0;}
